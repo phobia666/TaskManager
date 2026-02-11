@@ -150,8 +150,11 @@ function editDiv(taskDiv){
   const li = taskDiv.querySelector('li');
   const count = li.textContent.split('.')[0].trim();
   console.log(count);
+  const prevTask = li.textContent.split('.')[1].trim();
+  console.log(prevTask);
   const editBox = document.createElement('input');
   editBox.setAttribute('type', 'text');
+  editBox.value  = `${prevTask}`;
   const okButton = document.createElement('button');
   okButton.className = 'ok';
   okButton.innerHTML = 'Ok';
